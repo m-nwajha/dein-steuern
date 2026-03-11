@@ -15,7 +15,7 @@ export const Container: FC<ContainerProps> = ({
     'sm': 'max-w-[24rem]', // 384px
     'md': 'max-w-[36rem]', // 576px
     'lg': 'max-w-[48rem]', // 768px
-    'xl': 'max-w-[64rem]', // 1024px
+    'xl': 'max-w-[70rem]', // 1024px
     '2xl': 'max-w-[79rem]', // 1280px
   };
   return (
