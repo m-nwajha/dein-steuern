@@ -76,7 +76,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ isOpen, onClose }) => {
             >
                 {/* Header of Drawer */}
                 <div className='flex items-center justify-between p-6 border-b border-black/10'>
-                    <span className='font-bold text-lg'>Menu</span>
+                    <span className='font-bold text-lg'>Navigationsmenü</span>
                     <button
                         onClick={onClose}
                         className='w-8 h-8 flex items-center justify-center rounded-full bg-black/5 hover:bg-black/10 text-black'
