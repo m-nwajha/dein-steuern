@@ -12,6 +12,9 @@ export const PATHS = {
     einkommensteuer: '/einkommensteuer',
     gewerbesteuer: '/gewerbesteuer',
     korperschaftssteuer: '/koerperschaftssteuer',
+    impressum: '/impressum',
+    nutzungsbedingungen: '/nutzungsbedingungen',
+    datenschutzerklarung: '/datenschutzerklaerung',
 };
 
 export const NAVIGATE_LINKS = [
@@ -51,4 +54,18 @@ export const NAVIGATE_LINKS = [
         label: 'Kontakt',
         path: PATHS.kontakt
     }
+];
+
+export const FOOTER_LINKS = [
+    { id: 1, label: 'Home', path: PATHS.home },
+    { id: 2, label: 'Services', path: PATHS.services },
+    { id: 3, label: 'Kooperation', path: PATHS.kooperation },
+    { id: 4, label: 'Über uns', path: PATHS.uberUns },
+    { id: 5, label: 'Kontakt', path: PATHS.kontakt }
+];
+
+export const LEGAL_LINKS = [
+    { id: 1, label: 'Impressum', path: PATHS.impressum },
+    { id: 2, label: 'Nutzungsbedingungen', path: PATHS.nutzungsbedingungen },
+    { id: 3, label: 'Datenschutzerklärung', path: PATHS.datenschutzerklarung },
 ];

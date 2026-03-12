@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Nunito } from "next/font/google";
+import { Inter, Nunito, Roboto, Poppins } from "next/font/google";
 import "@/styles/globals.css";
 import MainLayout from '@/components/layouts/MainLayout';
 
@@ -11,7 +11,19 @@ const interSans = Inter({
 const nunito = Nunito({
   variable: "--font-nunito",
   subsets: ["latin"],
-})
+});
+
+const roboto = Roboto({
+  variable: "--font-roboto",
+  weight: ["400"],
+  subsets: ["latin"],
+});
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  weight: ["400"],
+  subsets: ["latin"],
+});
 
 
 export const metadata: Metadata = {
@@ -27,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body
-        className={`${interSans.variable} ${nunito.variable} antialiased`}
+        className={`${interSans.variable} ${nunito.variable} ${roboto.variable} ${poppins.variable} antialiased`}
       >
         <MainLayout>
           {children}

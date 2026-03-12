@@ -16,6 +16,8 @@
   --color-foreground: var(--foreground);
   --font-inter-sans: var(--font-inter-sans);
   --font-nunito: var(--font-nunito);
+  --font-roboto: var(--font-roboto);
+  --font-poppins: var(--font-poppins);
 }
 
 body {
