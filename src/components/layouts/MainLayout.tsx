@@ -3,6 +3,7 @@
 import { FC, ReactNode } from 'react';
 import Header from '../organisms/Header';
 import Footer from '../organisms/Footer';
+import ContactSection from '../organisms/ContactSection';
 
 const MainLayout: FC<{ children: ReactNode; }> = ({ children }) => {
     return (
@@ -11,6 +12,7 @@ const MainLayout: FC<{ children: ReactNode; }> = ({ children }) => {
             <main>
                 {children}
             </main>
+            <ContactSection />
             <Footer />
         </>
     );

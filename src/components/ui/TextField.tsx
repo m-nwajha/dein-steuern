@@ -51,7 +51,7 @@ export const TextField: FC<TextFieldProps> = ({
     return (
         <Box display='flex' direction='col' gap={2} className="w-full">
             {label && (
-                <label htmlFor={name} className="text-[14px] font-poppins font-normal leading-none text-black">
+                <label htmlFor={`field-${name}`} className="text-[14px] font-poppins font-normal leading-none text-black">
                     {label}
                     {required && <span className="text-red-500 ml-1">*</span>}
                 </label>
@@ -59,7 +59,7 @@ export const TextField: FC<TextFieldProps> = ({
 
             {multiline ? (
                 <textarea
-                    id={name}
+                    id={`field-${name}`}
                     name={name}
                     value={value}
                     onChange={onChange}
@@ -71,7 +71,7 @@ export const TextField: FC<TextFieldProps> = ({
                 />
             ) : (
                 <input
-                    id={name}
+                    id={`field-${name}`}
                     name={name}
                     type={type}
                     value={value}

@@ -34,7 +34,7 @@ type ButtonProps = ButtonAsButton | ButtonAsLink;
 const VARIANT_STYLES: Record<ButtonVariant, string> = {
     outline: `
         bg-background
-        border border-accent
+        border border-[#206D6E]
         text-[#138082]
         hover:-translate-y-1
     `,
@@ -61,7 +61,7 @@ export const Button: FC<ButtonProps> = ({
         'inline-flex items-center justify-center gap-2',
         'h-[50px] px-6',
         'rounded-lg',
-        'font-nunito font-normal text-[14px]',
+        'font-nunito font-normal text-[1.1rem]',
         'leading-none tracking-normal text-center',
         'transition-all duration-300',
         'cursor-pointer',
