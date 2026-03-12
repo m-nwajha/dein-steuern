@@ -5,15 +5,15 @@ import { Box, Button, Typography } from '../ui';
 
 const HeroTextBox = () => {
     return (
-        <Box display='flex' direction='col' justifyContent='center' alignItems='start' gap={6}>
-            <Typography variant='h1' size='h1' className='font-bold text-[#3A3A3A]'>
+        <Box display='flex' direction='col' justifyContent='center' alignItems='start' gap={6} className='text-center lg:text-left items-center lg:items-start pb-[3rem]'>
+            <Typography variant='h1' size='h1' className='font-bold text-[#3A3A3A] text-4xl md:text-4xl lg:text-5xl leading-[60px]'>
                 <span>{HERO.title.part1}</span> <span className='text-accent'>{HERO.title.part2}</span>
                 <br />
-                <span className="relative z-10 inline-block after:content-[''] after:absolute after:bg-[#DAF0BB] after:w-full after:h-[12px] after:bottom-0 after:left-0 after:rounded-[38px] after:-z-10">
+                <span className="relative z-10 inline-block after:content-[''] after:absolute after:bg-[#DAF0BB] after:w-full after:h-[8px] lg:after:h-[12px] after:bottom-1 lg:after:bottom-0 after:left-0 after:rounded-[38px] after:-z-10">
                     {HERO.title.part3}
                 </span>
             </Typography>
-            <Typography variant='p' size='body1' color='foreground' className='leading-[38px]'>
+            <Typography variant='p' size='body1' color='foreground' className='leading-[30px] lg:leading-[38px] max-w-2xl'>
                 {HERO.description}
             </Typography>
             <Button variant='solid' as='link' href={HERO.cta.href} isArrow icon={<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
