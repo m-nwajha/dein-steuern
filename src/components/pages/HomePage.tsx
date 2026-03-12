@@ -1,7 +1,12 @@
 'use client';
+
+import Hero from '../organisms/Hero';
+
 const HomePage = () => {
     return (
-        <div>HomePage</div>
+        <>
+            <Hero />
+        </>
     );
 };
 
