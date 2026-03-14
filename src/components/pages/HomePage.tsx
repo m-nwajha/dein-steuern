@@ -5,6 +5,8 @@ import KooperationSection from '../organisms/KooperationSection';
 import LeistungenSection from '../organisms/LeistungenSection';
 import MehrAlsNurZahlenSection from '../organisms/MehrAlsNurZahlenSection';
 import NetzwerksSection from '../organisms/NetzwerksSection';
+import SoFindenSieUnsSection from '../organisms/SoFindenSieUnsSection';
+import VideoSection from '../organisms/VideoSection';
 
 const HomePage = () => {
     return (
@@ -14,6 +16,8 @@ const HomePage = () => {
             <LeistungenSection />
             <MehrAlsNurZahlenSection />
             <NetzwerksSection />
+            <VideoSection />
+            <SoFindenSieUnsSection />
         </>
     );
 };
