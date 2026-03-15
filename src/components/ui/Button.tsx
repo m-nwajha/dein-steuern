@@ -4,7 +4,7 @@ import { FC, ReactNode } from 'react';
 import Link from 'next/link';
 import { CN } from '@/utils/className';
 
-type ButtonVariant = 'outline' | 'solid';
+type ButtonVariant = 'outline' | 'solid' | 'solid-light';
 
 type BaseProps = {
     children: ReactNode;
@@ -39,13 +39,21 @@ const VARIANT_STYLES: Record<ButtonVariant, string> = {
         hover:-translate-y-1
     `,
     solid: `
-    bg-accent
-    text-background
-    hover:bg-primary hover:text-[#3A3939]
-    [&:hover_.arrow]:rotate-90
-    [filter:drop-shadow(0px_20px_15px_#13808299)]
-    hover:[filter:drop-shadow(0px_20px_15px_#FEDE6F99)]
-`,
+        bg-accent
+        text-background
+        hover:bg-primary hover:text-[#3A3939]
+        [&:hover_.arrow]:rotate-90
+        [filter:drop-shadow(0px_20px_15px_#13808299)]
+        hover:[filter:drop-shadow(0px_20px_15px_#FEDE6F99)]
+    `,
+    'solid-light': `
+        bg-background
+        text-accent
+        hover:bg-primary hover:text-[#3A3939]
+        [&:hover_.arrow]:rotate-90
+        [filter:drop-shadow(0px_20px_15px_#fffefb7f)]
+        hover:[filter:drop-shadow(0px_20px_15px_#FEDE6F99)]
+    `,
 };
 
 export const Button: FC<ButtonProps> = ({
@@ -58,7 +66,7 @@ export const Button: FC<ButtonProps> = ({
     ...props
 }) => {
     const classes = CN(
-        'inline-flex items-center justify-center gap-2',
+        'group inline-flex items-center justify-center gap-2',
         'h-[50px] px-6',
         'rounded-lg',
         'font-nunito font-normal text-[1.1rem]',
