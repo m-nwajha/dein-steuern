@@ -31,3 +31,30 @@ body {
   color: var(--foreground);
   font-family: var(--font-inter-sans);
 }
+
+@keyframes loading {
+  0% {
+    width: 0%;
+    margin-left: 0%;
+  }
+
+  50% {
+    width: 100%;
+    margin-left: 0%;
+  }
+
+  100% {
+    width: 0%;
+    margin-left: 100%;
+  }
+}
+
+
+#nprogress .bar {
+  background: linear-gradient(90deg, var(--accent), var(--Primary-dark-green)) !important;
+  height: 3px !important;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px var(--accent), 0 0 5px var(--accent) !important;
+}

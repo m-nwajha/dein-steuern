@@ -8,6 +8,7 @@ import ContactSection from '../organisms/ContactSection';
 import CookieBanner from '../organisms/CookieBanner';
 import WhatsAppButton from '../atoms/WhatsAppButton';
 import ScrollToTopButton from '../atoms/ScrollToTopButton';
+import ProgressBar from '../atoms/ProgressBar';
 
 const HIDE_CONTACT_PATHS = ['/impressum', '/nutzungsbedingungen', '/datenschutzerklaerung'];
 
@@ -17,6 +18,7 @@ const MainLayout: FC<{ children: ReactNode; }> = ({ children }) => {
 
     return (
         <>
+            <ProgressBar />
             <Header />
             <main>
                 {children}
