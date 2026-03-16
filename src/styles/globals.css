@@ -6,6 +6,9 @@
   --accent: #206D6E;
   --background: #FFFEFB;
   --foreground: #606060;
+  --Primary-dark-green: #138082;
+  --Primary-yellow: #FEDE6F;
+  --Background-light-yellow: #FFFEFB;
 }
 
 @theme inline {
@@ -14,6 +17,9 @@
   --color-accent: var(--accent);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary-dark-green: var(--Primary-dark-green);
+  --color-primary-yellow: var(--Primary-yellow);
+  --color-background-light-yellow: var(--Background-light-yellow);
   --font-inter-sans: var(--font-inter-sans);
   --font-nunito: var(--font-nunito);
   --font-roboto: var(--font-roboto);

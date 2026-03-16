@@ -1,6 +1,6 @@
 'use client';
 
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 import { Box, Typography } from '../ui';
 import { Badge } from '../ui/Badge';
 import { TEXT_ALIGN } from '@/constants/grid';
@@ -8,7 +8,7 @@ import { TEXT_ALIGN } from '@/constants/grid';
 type SectionHeadingProps = {
     badge?: string;
     title?: string;
-    description?: string;
+    description?: ReactNode;
     align?: 'center' | 'start' | 'end';
     isJustify?: boolean;
 };
