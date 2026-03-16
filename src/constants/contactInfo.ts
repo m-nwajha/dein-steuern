@@ -9,6 +9,7 @@ export const CONTACT_INFO = {
     ustId: 'DE XXXXXXXXX',
     steuernummer: 'XX/XXX/XXXXX',
     kammer: 'Steuerberaterkammer Niedersachsen',
+    locationURL: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.609121855673!2d13.3888599!3d52.5170565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851c6c5fd34f5%3A0xe5567fce510e11e0!2sBerlin!5e0!3m2!1sen!2sde!4v1700000000000!5m2!1sen!2sde"
 };
 
 export const SOCIAL_MEDIA_LINKS = [

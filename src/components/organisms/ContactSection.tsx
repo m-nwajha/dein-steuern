@@ -1,20 +1,32 @@
+'use client';
+
+import { usePathname } from 'next/navigation';
 import SectionHeading from '../molecules/SectionHeading';
-import { Container, Grid, TextField, Button, Box, Typography } from '../ui';
+import { Container, Grid, TextField, Button, Box } from '../ui';
 import { contactSectionData } from '@/constants/contactSection';
+import { CONTACT_INFO } from '@/constants/contactInfo';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const ContactSection = () => {
+  const pathname = usePathname();
+  const isKontaktPage = pathname === '/kontakt';
+
   return (
     <section id='contact' className="py-16">
       <Container variant='lg'>
-        <SectionHeading badge='in enger Partnerschaft mit' title='In Kooperation mit erfahrenen Steuerberatern' description='Gemeinsam kümmern wir uns um Ihre steuerlichen Aufgaben und vertreten Ihre Anliegen gegenüber dem Finanzamt – kompetent, zuverlässig und praxisnah.' />
+        <SectionHeading
+          badge={contactSectionData.heading.badge}
+          title={contactSectionData.heading.title}
+          description={contactSectionData.heading.description}
+        />
       </Container>
       <Container variant='xl' className="mt-12">
         <Grid sm={1} md={2} lg={2} className='gap-0'>
           {/* Google Map */}
-          <Box className="w-full h-full min-h-[400px] border-[0.5px] border-[#DBDBDC] bg-background rounded-tl-lg rounded-bl-lg border-r-0 relative">
+          <Box className="w-full h-full min-h-[400px] border-[0.5px] border-[#DBDBDC] bg-background rounded-tl-lg rounded-bl-lg border-r-0 relative overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.609121855673!2d13.3888599!3d52.5170565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851c6c5fd34f5%3A0xe5567fce510e11e0!2sBerlin!5e0!3m2!1sen!2sde!4v1700000000000!5m2!1sen!2sde"
+              src={CONTACT_INFO.locationURL}
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: '400px' }}
@@ -22,6 +34,20 @@ const ContactSection = () => {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
+            {/* Email Bar - only on kontakt page */}
+            {isKontaktPage && (
+              <Box
+                display='flex'
+                alignItems='center'
+                gap={2}
+                className="absolute bottom-0 left-0 right-0 bg-[#3A3A3AD4] backdrop-blur-sm px-8 py-6"
+              >
+                <Image src='/assets/images/email-icon.svg' alt='email' width={20} height={20} />
+                <Link href={`mailto:${CONTACT_INFO.email}`} className="text-white font-nunito text-[16px]">
+                  E-Mail Adresse: {CONTACT_INFO.email}
+                </Link>
+              </Box>
+            )}
           </Box>
           {/* Contact Form */}
           <Box display="flex" direction="col" justifyContent='center' gap={6} className="items-stretch border-[0.5px] border-[#DBDBDC] bg-background rounded-tr-lg rounded-br-lg p-8 border-l-0">

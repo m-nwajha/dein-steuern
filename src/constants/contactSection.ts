@@ -1,4 +1,9 @@
 export const contactSectionData = {
+    heading: {
+        badge: 'Kontakt',
+        title: 'Lassen Sie uns sprechen',
+        description: 'Haben Sie Fragen zu Ihren Steuern oder möchten Sie Ihre Buchhaltung digitalisieren?\nWir freuen uns darauf, Sie kennenzulernen',
+    },
     form: {
         title: 'Schreiben Sie uns',
         rows: [
@@ -15,22 +20,5 @@ export const contactSectionData = {
             ],
         ],
         submitButton: { text: 'Absenden' },
-    },
-    info: {
-        title: 'Kontaktinformationen',
-        details: [
-            {
-                label: 'Adresse',
-                value: 'Musterstraße 123, 12345 Musterstadt',
-            },
-            {
-                label: 'Telefon',
-                value: '+49 123 456789',
-            },
-            {
-                label: 'E-Mail',
-                value: 'info@deine-steuern.de',
-            },
-        ],
-    },
+    }
 };
