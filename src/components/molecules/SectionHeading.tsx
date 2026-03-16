@@ -18,7 +18,7 @@ const SectionHeading: FC<SectionHeadingProps> = ({ badge, title, description, al
         <Box className='mb-8' display='flex' direction='col' justifyContent='center' gap={4} alignItems={align}>
             {badge && <Badge>{badge}</Badge>}
             {title && <Typography variant='h2' size='h2' className='text-[#3A3A3A] font-bold font-inter-sans'>{title}</Typography>}
-            {description && <Typography variant='p' className={`text-[#606060] ${TEXT_ALIGN[align]} ${isJustify ? 'text-justify' : ''} leading-[1.9]`}>{description}</Typography>}
+            {description && <Typography variant={typeof description === 'string' ? 'p' : 'div'} className={`text-[#606060] ${TEXT_ALIGN[align]} ${isJustify ? 'text-justify' : ''} leading-[1.9]`}>{description}</Typography>}
         </Box>
     );
 };
