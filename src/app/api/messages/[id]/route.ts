@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { auth } from '@/lib/auth';
+import { cookies } from 'next/headers';
+import { verifyJWT } from '@/lib/jwt';
 import { connectDB } from '@/lib/mongoose';
 import { Message } from '@/models/Message';
 
@@ -7,8 +8,12 @@ export async function DELETE(
     _: NextRequest,
     { params }: { params: Promise<{ id: string; }>; }
 ) {
-    const session = await auth();
-    if (!session) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    const cookieStore = await cookies();
+    const token = cookieStore.get('admin_token')?.value;
+
+    if (!token || !verifyJWT(token)) {
+        return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
 
     const { id } = await params;
     await connectDB();
@@ -17,8 +22,12 @@ export async function DELETE(
 }
 
 export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id: string; }>; }) {
-    const session = await auth();
-    if (!session) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    const cookieStore = await cookies();
+    const token = cookieStore.get('admin_token')?.value;
+
+    if (!token || !verifyJWT(token)) {
+        return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
 
     await connectDB();
     const { isRead } = await req.json();

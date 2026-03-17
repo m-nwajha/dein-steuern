@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { signIn } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { Box, Typography, Button } from '../ui';
 import { TextField } from '../ui/TextField';
@@ -15,14 +14,28 @@ const AdminLoginPage = () => {
     const handleSubmit = async () => {
         setLoading(true);
         setError('');
-        const res = await signIn('credentials', {
-            username: form.username,
-            password: form.password,
-            redirect: false,
-        });
-        setLoading(false);
-        if (res?.error) return setError('Ungültige Anmeldedaten');
-        router.push('/admin');
+        
+        try {
+            const res = await fetch('/api/auth/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(form),
+            });
+
+            const data = await res.json();
+            
+            if (!res.ok) {
+                setError(data.error || 'Ungültige Anmeldedaten');
+                return;
+            }
+
+            router.push('/admin');
+            router.refresh();
+        } catch (err) {
+            setError('Ein Fehler ist aufgetreten');
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
