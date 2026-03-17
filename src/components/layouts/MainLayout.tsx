@@ -10,12 +10,16 @@ import WhatsAppButton from '../atoms/WhatsAppButton';
 import ScrollToTopButton from '../atoms/ScrollToTopButton';
 import ProgressBar from '../atoms/ProgressBar';
 
+const HIDE_LAYOUT_PATHS = ['/admin', '/admin/login'];
+
 const HIDE_CONTACT_PATHS = ['/impressum', '/nutzungsbedingungen', '/datenschutzerklaerung'];
 
 const MainLayout: FC<{ children: ReactNode; }> = ({ children }) => {
     const pathname = usePathname();
     const showContact = !HIDE_CONTACT_PATHS.includes(pathname);
+    const isAdminPath = HIDE_LAYOUT_PATHS.some(path => pathname.startsWith(path));
 
+    if (isAdminPath) return <>{children}</>;
     return (
         <>
             <ProgressBar />

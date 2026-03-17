@@ -12,7 +12,7 @@ export const contactSectionData = {
                 { key: 'email', label: 'E-Mail Adresse', placeholder: 'Ihre E-Mail-Adresse', type: 'email', multiline: false, rows: 1 },
             ],
             [
-                { key: 'phone', label: 'Telefonnummer', placeholder: 'Ihre Telefonnummer', type: 'tel', multiline: false, rows: 1 },
+                { key: 'phone', label: 'Telefonnummer', placeholder: '+49 123 456789', type: 'tel', multiline: false, rows: 1 },
                 { key: 'service', label: 'Gewünschte Leistung', placeholder: 'Ihre Gewünschte Leistung', type: 'text', multiline: false, rows: 1 },
             ],
             [
