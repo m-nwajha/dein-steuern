@@ -5,6 +5,6 @@ export const MEHR_ALS_NUR_ZAHLEN = {
     image: "/assets/images/mehr-als-nur-zahlen.png",
     button: {
         label: "Kontakt aufnehmen",
-        href: "/mehr-als-nur-zahlen"
+        href: "#contact"
     }
 }
