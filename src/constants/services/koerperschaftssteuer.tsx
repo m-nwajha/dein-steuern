@@ -1,7 +1,7 @@
 import { ServicePageData } from '@/@types/ServicePage';
 import Br from '@/components/ui/Br';
 
-export const KOERPERSCHAFTSSTEUER_PAGE: ServicePageData = {
+export const KOERPERSCHAFTSSTEUER_PAGE: Omit<ServicePageData, 'starten' | 'leistungen'> = {
     heading: {
         title: 'Körperschaftsteuer',
         description: (<>
@@ -13,25 +13,5 @@ export const KOERPERSCHAFTSSTEUER_PAGE: ServicePageData = {
             <Br />
             Mit unserer Unterstützung sorgen Sie für Transparenz, Struktur und eine effiziente Vorbereitung Ihrer Körperschaftsteuerunterlagen. So stehen alle relevanten Daten vollständig und übersichtlich zur Verfügung.
         </>),
-    },
-    starten: {
-        title: 'Starten Sie jetzt durch',
-        description: 'Sichern Sie sich eine persönliche und unverbindliche Beratung.',
-        button: {
-            label: 'Kostenlose Beratung anfragen',
-            href: '#',
-        },
-    },
-    leistungen: {
-        title: 'Unsere Leistungen',
-        badge: 'Was wir für Sie übernehmen',
-        description: 'Von der Buchführung bis zur strategischen Beratung – wir kümmern uns um Ihre Zahlen, damit Sie sich auf Ihr Unternehmen konzentrieren können.',
-        items: [
-            { id: 1, title: 'Gründungsberatung' },
-            { id: 2, title: 'Firmenberatung' },
-            { id: 3, title: 'Löhne und Gehälter' },
-            { id: 4, title: 'Lohnsteuer' },
-            { id: 5, title: 'Firmenbegleitung' },
-        ],
     },
 };

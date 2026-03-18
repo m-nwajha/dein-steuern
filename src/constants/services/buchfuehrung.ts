@@ -1,6 +1,6 @@
 import { ServicePageData } from '@/@types/ServicePage';
 
-export const BUCHFUEHRUNG_PAGE: ServicePageData = {
+export const BUCHFUEHRUNG_PAGE: Omit<ServicePageData, 'starten' | 'leistungen'> = {
     heading: {
         title: 'Buchführung für Unternehmen und Selbstständige',
         description: 'Wir unterstützen Unternehmen, Selbstständige und Gründer zuverlässig bei der laufenden Buchführung und der Organisation ihrer Unterlagen. Mit strukturierter Arbeitsweise und langjähriger Erfahrung sorgen wir für Ordnung in Ihren Zahlen und eine klare Übersicht über Ihre Finanzen.\nWir bereiten Ihre Buchhaltung professionell vor, erstellen Auswertungen und unterstützen Sie bei allen organisatorischen Themen rund um Ihre Unterlagen und das Finanzamt. So können Sie sich auf Ihr Tagesgeschäft konzentrieren, während wir uns um die Struktur Ihrer Buchführung kümmern.',
@@ -56,26 +56,6 @@ export const BUCHFUEHRUNG_PAGE: ServicePageData = {
                 theme: 'dark',
                 side: 'right',
             },
-        ],
-    },
-    starten: {
-        title: 'Starten Sie jetzt durch',
-        description: 'Sichern Sie sich eine persönliche und unverbindliche Beratung.',
-        button: {
-            label: 'Kostenlose Beratung anfragen',
-            href: '#',
-        },
-    },
-    leistungen: {
-        title: 'Unsere Leistungen',
-        badge: 'Was wir für Sie übernehmen',
-        description: 'Von der Buchführung bis zur strategischen Beratung – wir kümmern uns um Ihre Zahlen, damit Sie sich auf Ihr Unternehmen konzentrieren können.',
-        items: [
-            { id: 1, title: 'Gründungsberatung' },
-            { id: 2, title: 'Firmenberatung' },
-            { id: 3, title: 'Löhne und Gehälter' },
-            { id: 4, title: 'Lohnsteuer' },
-            { id: 5, title: 'Firmenbegleitung' },
         ],
     },
 };

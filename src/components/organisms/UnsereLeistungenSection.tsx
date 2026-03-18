@@ -16,6 +16,7 @@ type UnsereLeistungenProps = {
     items: {
         id: number;
         title: string;
+        href?: string;
     }[];
 };
 const UnsereLeistungenSection: FC<UnsereLeistungenProps> = ({ title, description, badge, items }) => {
@@ -45,7 +46,7 @@ const UnsereLeistungenSection: FC<UnsereLeistungenProps> = ({ title, description
                 >
                     {items.map((item) => (
                         <SwiperSlide key={item.id}>
-                            <LeistungCard title={item.title} />
+                            <LeistungCard title={item.title} href={item.href} />
                         </SwiperSlide>
                     ))}
                 </Swiper>

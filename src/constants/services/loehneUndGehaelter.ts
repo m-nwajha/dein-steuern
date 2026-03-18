@@ -1,6 +1,6 @@
 import { ServicePageData } from '@/@types/ServicePage';
 
-export const LOEHNE_UND_GEHAELTER_PAGE: ServicePageData = {
+export const LOEHNE_UND_GEHAELTER_PAGE: Omit<ServicePageData, 'starten' | 'leistungen'> = {
     heading: {
         title: 'Löhne und Gehälter',
         description: 'Wir unterstützen Unternehmen zuverlässig bei der Erstellung der laufenden Lohn- und Gehaltsabrechnungen. Von der Vorbereitung der Daten bis zur strukturierten Aufbereitung aller relevanten Unterlagen sorgen wir für einen reibungslosen Ablauf. So behalten Sie den Überblick und Ihre Mitarbeiter erhalten ihre Abrechnungen pünktlich und korrekt.',
@@ -57,26 +57,6 @@ export const LOEHNE_UND_GEHAELTER_PAGE: ServicePageData = {
                 theme: 'dark',
                 side: 'right',
             },
-        ],
-    },
-    starten: {
-        title: 'Starten Sie jetzt durch',
-        description: 'Sichern Sie sich eine persönliche und unverbindliche Beratung.',
-        button: {
-            label: 'Kostenlose Beratung anfragen',
-            href: '#',
-        },
-    },
-    leistungen: {
-        title: 'Unsere Leistungen',
-        badge: 'Was wir für Sie übernehmen',
-        description: 'Von der Buchführung bis zur strategischen Beratung – wir kümmern uns um Ihre Zahlen, damit Sie sich auf Ihr Unternehmen konzentrieren können.',
-        items: [
-            { id: 1, title: 'Gründungsberatung' },
-            { id: 2, title: 'Firmenberatung' },
-            { id: 3, title: 'Löhne und Gehälter' },
-            { id: 4, title: 'Lohnsteuer' },
-            { id: 5, title: 'Firmenbegleitung' },
         ],
     },
 };

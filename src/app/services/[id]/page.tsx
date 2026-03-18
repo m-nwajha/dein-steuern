@@ -12,5 +12,5 @@ export default async function Service({ params }: ServiceProps) {
 
     if (!data) notFound();
 
-    return <ServicePage data={data} />;
+    return <ServicePage data={data} currentServiceId={id} />;
 }

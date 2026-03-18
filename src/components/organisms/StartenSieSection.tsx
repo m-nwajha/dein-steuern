@@ -14,7 +14,7 @@ type StartenSieSectionProps ={
 }
 const StartenSieSection: FC<StartenSieSectionProps> = ({title , description , button}) => {
   return (
-    <section id='starten-sie-jetzt' className='py-16'>
+    <section id='starten-sie-jetzt' className='py-5'>
         <Container variant='xl'>
             <Box gap={6} display='flex' direction='col' justifyContent='center' alignItems='center' className='w-full bg-primary-dark-green rounded-[8px] px-8 py-15'>
                   <Typography

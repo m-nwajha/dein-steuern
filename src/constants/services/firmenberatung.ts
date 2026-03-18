@@ -1,6 +1,6 @@
 import { ServicePageData } from '@/@types/ServicePage';
 
-export const FIRMENBERATUNG_PAGE: ServicePageData = {
+export const FIRMENBERATUNG_PAGE: Omit<ServicePageData, 'starten' | 'leistungen'> = {
     heading: {
         title: 'Firmenberatung',
         description: 'Wir unterstützen Unternehmen, Selbstständige und Gründer bei der Organisation ihrer kaufmännischen Abläufe und bei allen Fragen rund um Buchführung, Struktur und betriebliche Zahlen. Gemeinsam schaffen wir transparente Prozesse, eine klare Übersicht über Einnahmen und Ausgaben sowie eine solide Grundlage für unternehmerische Entscheidungen. Dabei begleiten wir Sie im Alltag Ihres Unternehmens, bereiten Unterlagen strukturiert auf und sorgen für effiziente Abläufe im Austausch mit den zuständigen Stellen.',
@@ -57,26 +57,6 @@ export const FIRMENBERATUNG_PAGE: ServicePageData = {
                 theme: 'dark',
                 side: 'right',
             },
-        ],
-    },
-    starten: {
-        title: 'Starten Sie jetzt durch',
-        description: 'Sichern Sie sich eine persönliche und unverbindliche Beratung.',
-        button: {
-            label: 'Kostenlose Beratung anfragen',
-            href: '#',
-        },
-    },
-    leistungen: {
-        title: 'Unsere Leistungen',
-        badge: 'Was wir für Sie übernehmen',
-        description: 'Von der Buchführung bis zur strategischen Beratung – wir kümmern uns um Ihre Zahlen, damit Sie sich auf Ihr Unternehmen konzentrieren können.',
-        items: [
-            { id: 1, title: 'Gründungsberatung' },
-            { id: 2, title: 'Firmenberatung' },
-            { id: 3, title: 'Löhne und Gehälter' },
-            { id: 4, title: 'Lohnsteuer' },
-            { id: 5, title: 'Firmenbegleitung' },
         ],
     },
 };
