@@ -19,7 +19,7 @@ const Footer = () => {
                     </Box>
                     <Box display='flex' justifyContent='center' alignItems='center' direction='col' gap={5} className='py-7 border-t-[0.5px] border-accent/50 w-full'>
                         <LegalMenu />
-                        <Typography className='text-[#283646] font-roboto font-[400]'>© {new Date().getFullYear()} Deine Steuern – Design und Entwicklung: <Link href='https://orionlens.net/' target='_blank' rel='noopener noreferrer'>OrionLens</Link></Typography>
+                        <Typography className='text-[#283646] font-roboto font-[400]'>© {new Date().getFullYear()} Deine Steuern – <br className='block md:hidden' /> Design und Entwicklung: <Link href='https://orionlens.net/' target='_blank' rel='noopener noreferrer'>OrionLens</Link></Typography>
                     </Box>
                 </Box>
             </Container>

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import { Box, Typography, Container, Button } from '../ui';
+import { Box, Typography, Container, Button, Grid } from '../ui';
 import { CN } from '@/utils/className';
 import Footer from '../organisms/Footer';
 
@@ -93,7 +93,7 @@ const AdminDashboardPage = () => {
 
             <Container variant='xl' className="py-8">
                 {/* Stats */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <Grid sm={1} md={3} gap={12} textAlign='center' className="mb-8">
                     {[
                         { label: 'Gesamt', value: stats.total, color: 'bg-accent' },
                         { label: 'Ungelesen', value: stats.unread, color: 'bg-primary' },
@@ -115,7 +115,7 @@ const AdminDashboardPage = () => {
                             </Typography>
                         </Box>
                     ))}
-                </div>
+                </Grid>
 
                 {/* Content */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

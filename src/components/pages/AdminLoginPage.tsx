@@ -39,15 +39,17 @@ const AdminLoginPage = () => {
     };
 
     return (
-        <section className="min-h-screen bg-background flex items-center justify-center">
+        <section className="min-h-screen bg-[url('/assets/images/d3697dc9a10cecfb5e0c932cb3f424fb5b164826.jpg')] bg-cover bg-center flex items-center justify-center after:content-[''] after:absolute after:inset-0 after:bg-black/20 after:backdrop-blur-sm after:z-10">
             <Box
                 display='flex'
                 direction='col'
+                justifyContent='center'
+                alignItems='center'
                 gap={6}
-                className="w-full max-w-[400px] bg-white rounded-xl p-8 shadow-[0px_4px_24px_0px_#00000014]"
+                className="w-full z-20 max-w-[400px] bg-white/60 backdrop-blur-sm rounded-xl p-8 shadow-[0px_4px_24px_0px_#00000014]"
             >
-                <Box display='flex' direction='col' gap={2} alignItems='center'>
-                    <Typography variant='h4' className="font-inter font-bold text-[24px] text-[#3A3A3A]">
+                <Box display='flex' direction='col' gap={2} alignItems='center' justifyContent='center'>
+                    <Typography variant='h4' className="text-accent font-inter font-bold text-[24px]">
                         Admin Login
                     </Typography>
                     <Typography variant='p' className="font-poppins text-[14px] text-foreground">
@@ -55,7 +57,7 @@ const AdminLoginPage = () => {
                     </Typography>
                 </Box>
 
-                <Box display='flex' direction='col' gap={4}>
+                <Box display='flex'  direction='col' className='w-full' gap={4}>
                     <TextField
                         name="username"
                         label="Benutzername"
