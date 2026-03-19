@@ -93,7 +93,7 @@ const AdminDashboardPage = () => {
 
             <Container variant='xl' className="py-8">
                 {/* Stats */}
-                <Grid sm={1} md={3} gap={12} textAlign='center' className="mb-8">
+                <Grid sm={1} md={3} lg={3} gap={12} textAlign='center' className="mb-8">
                     {[
                         { label: 'Gesamt', value: stats.total, color: 'bg-accent' },
                         { label: 'Ungelesen', value: stats.unread, color: 'bg-primary' },

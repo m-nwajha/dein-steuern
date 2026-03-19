@@ -22,6 +22,7 @@ const HeroImagesBox = () => {
                     afterStyle="after:content-[''] after:absolute after:w-[40px] lg:after:w-[56.7px] after:h-[40px] lg:after:h-[56.7px] after:top-[-10px] lg:after:top-[-20px] after:right-[-10px] lg:after:right-[-20px] after:bg-[#FFF4CEFC] after:border-[4px] lg:after:border-[7px] after:border-white after:rounded-[8px] after:opacity-100 after:z-20"
                     beforeStyle="before:content-[''] before:absolute before:w-[25px] lg:before:w-[35px] before:h-[25px] lg:before:h-[35px] before:bottom-[60px] lg:before:bottom-[80px] before:-right-[15px] lg:before:-right-[25px] before:bg-[#FFFEFB] before:border-[4px] lg:before:border-[7px] before:border-[#7EBF2778] before:rounded-full before:opacity-100 before:-z-10"
                     className="w-[140px] h-[140px] md:w-[180px] md:h-[180px] lg:w-[205px] lg:h-[205px]"
+                    priority
                 />
                 <HeroImageItem
                     borderColor='green'
@@ -31,6 +32,7 @@ const HeroImagesBox = () => {
                     src='/assets/images/hero-img-gif.gif'
                     alt='hero image'
                     className="w-[200px] h-[130px] md:w-[280px] md:h-[185px] lg:w-[321.31px] lg:h-[212.64px]"
+                    priority
                 />
             </Box>
             <Box>
@@ -42,6 +44,7 @@ const HeroImagesBox = () => {
                     alt='hero image' 
                     afterStyle="after:content-[''] after:absolute after:w-[50px] lg:after:w-[75.6px] after:h-[50px] lg:after:h-[75.6px] after:bottom-[-20px] lg:after:bottom-[-30px] after:right-[-20px] lg:after:right-[-30px] after:bg-transparent after:border-[5px] lg:after:border-[7px] after:border-[#7EBF274D] after:rounded-full after:opacity-100 after:z-20"
                     className="w-[140px] h-[140px] md:w-[180px] md:h-[180px] lg:w-[200px] lg:h-[200px]"
+                    priority
                 />
             </Box>
         </Box>

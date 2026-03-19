@@ -14,6 +14,7 @@ type HeroImageItemProps = {
     className?: string;
     afterStyle?: string;
     beforeStyle?: string;
+    priority?: boolean;
 };
 
 const BORDER_STYLES: Record<BorderColor, string> = {
@@ -32,6 +33,7 @@ const HeroImageItem: FC<HeroImageItemProps> = ({
     className,
     afterStyle,
     beforeStyle,
+    priority = false,
 }) => {
     return (
         <div
@@ -52,6 +54,7 @@ const HeroImageItem: FC<HeroImageItemProps> = ({
                     alt={alt}
                     width={width}
                     height={height}
+                    priority={priority}
                     className="w-full h-full object-cover"
                 />
             </div>

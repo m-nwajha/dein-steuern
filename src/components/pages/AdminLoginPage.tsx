@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import { Box, Typography, Button } from '../ui';
 import { TextField } from '../ui/TextField';
 
@@ -39,7 +40,15 @@ const AdminLoginPage = () => {
     };
 
     return (
-        <section className="min-h-screen bg-[url('/assets/images/d3697dc9a10cecfb5e0c932cb3f424fb5b164826.jpg')] bg-cover bg-center flex items-center justify-center after:content-[''] after:absolute after:inset-0 after:bg-black/20 after:backdrop-blur-sm after:z-10">
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden after:content-[''] after:absolute after:inset-0 after:bg-black/20 after:backdrop-blur-sm after:z-10">
+            <Image
+                src="/assets/images/d3697dc9a10cecfb5e0c932cb3f424fb5b164826.jpg"
+                alt="Login Background"
+                fill
+                priority
+                style={{ objectFit: 'cover' }}
+                className="-z-10"
+            />
             <Box
                 display='flex'
                 direction='col'
