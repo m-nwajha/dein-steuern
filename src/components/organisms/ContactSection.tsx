@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { usePathname } from 'next/navigation';
+import ReCAPTCHA from 'react-google-recaptcha';
 import SectionHeading from '../molecules/SectionHeading';
 import { Container, Grid, TextField, Button, Box, Typography } from '../ui';
 import { contactSectionData } from '@/constants/contactSection';
@@ -59,6 +60,8 @@ const ContactSection = () => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [serverError, setServerError] = useState('');
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const [captchaValue, setCaptchaValue] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -79,16 +82,27 @@ const ContactSection = () => {
     setServerError('');
 
     try {
+      if (!captchaValue) {
+        setServerError('Bitte lösen Sie das ReCAPTCHA.');
+        setLoading(false);
+        return;
+      }
+
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, captcha: captchaValue }),
       });
 
-      if (!res.ok) throw new Error('Serverfehler');
+      if (!res.ok) {
+        const data = await res.json();
+        throw new Error(data.error || 'Serverfehler');
+      }
 
       setSuccess(true);
       setForm(initialForm);
+      setCaptchaValue(null);
+      recaptchaRef.current?.reset();
     } catch {
       setServerError('Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.');
     } finally {
@@ -108,15 +122,15 @@ const ContactSection = () => {
         </AnimatedSection>
       </Container>
       <Container variant='xl' className="mt-12">
-        <Grid sm={1} md={2} lg={2} className='gap-0'>
+        <Grid sm={1} md={2} lg={2} alignItem='stretch'>
           {/* Google Map */}
-          <Box className="w-full h-full min-h-[400px] border-[0.5px] border-[#DBDBDC] bg-background rounded-tl-lg rounded-bl-lg border-r-0 relative overflow-hidden">
-            <AnimatedSection direction='left' amount={0.1}>
+          <Box className="w-full h-full border-[0.5px] border-[#DBDBDC] bg-background rounded-tl-lg rounded-bl-lg border-r-0 relative overflow-hidden">
+            <AnimatedSection direction='left' amount={0.1} className="h-full">
               <iframe
                 src={CONTACT_INFO.locationURL}
                 width="100%"
                 height="100%"
-                style={{ border: 0, minHeight: '400px' }}
+                style={{ border: 0, height: '100%' }}
                 allowFullScreen={false}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -187,6 +201,14 @@ const ContactSection = () => {
                     {serverError}
                   </Typography>
                 )}
+
+                <AnimatedSection direction='up' delay={0.4} amount={0.1}>
+                  <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
+                    onChange={(value) => setCaptchaValue(value)}
+                  />
+                </AnimatedSection>
 
                 <AnimatedSection direction='up' delay={0.5} amount={0.1}>
                   <Button

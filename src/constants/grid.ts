@@ -69,5 +69,6 @@ export const TEXT_ALIGN = {
 export const ALIGN_ITEM = {
     start: 'items-start',
     end: 'items-end',
-    center: 'items-center'
+    center: 'items-center',
+    stretch: 'items-stretch'
 };
