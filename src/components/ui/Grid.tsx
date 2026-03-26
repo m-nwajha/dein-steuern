@@ -30,8 +30,8 @@ export const Grid: FC<GridProps> = ({
         MD_SIZE[md],
         LG_SIZE[lg],
         GAP[gap],
-        TEXT_ALIGN[textAlign],
-        ALIGN_ITEM[alignItem],
+        (TEXT_ALIGN as any)[textAlign],
+        (ALIGN_ITEM as any)[alignItem],
         className
       )}>
       {children}

@@ -23,9 +23,9 @@ export const Box: FC<BoxProps> = ({
       className={CN(
         DISPLAY[display],
         display === 'flex' ? DIRECTION[direction] : '',
-        display === 'block' ? TEXT_ALIGN[textAlign] : '',
-        display === 'flex' ? JUSTIFY_CONTENT[justifyContent] : '',
-        display === 'flex' ? ALIGN_ITEM[alignItems] : '',
+        display === 'block' ? (TEXT_ALIGN as any)[textAlign] : '',
+        display === 'flex' ? (JUSTIFY_CONTENT as any)[justifyContent] : '',
+        display === 'flex' ? (ALIGN_ITEM as any)[alignItems] : '',
         display === 'flex' ? GAP[gap] : '',
         className,
       )}>

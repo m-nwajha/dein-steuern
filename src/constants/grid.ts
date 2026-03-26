@@ -63,7 +63,7 @@ export const GAP = {
 export const TEXT_ALIGN = {
     start: 'text-start',
     end: 'text-end',
-    center: 'text-center'
+    center: 'text-center',
 };
 
 export const ALIGN_ITEM = {
