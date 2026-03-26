@@ -1,73 +1,41 @@
 import { ReactNode } from 'react';
 import Br from '@/components/ui/Br';
-import { CONTACT_INFO } from '@/constants/contactInfo';
 
 export const IMPRESSUM_CONTENT: ReactNode = (
     <>
         <strong>Angaben gemäß § 5 TMG</strong>
         <Br />
-        {CONTACT_INFO.companyName}
+        Kooperation mit Steuerberater
         <Br />
-        {CONTACT_INFO.street}
+        Inhaber: Dilovan Abdo
         <Br />
-        {CONTACT_INFO.plz}
+        Braunschweiger Str. 169
         <Br />
+        38259 Salzgitter
         <Br />
-        <strong>Vertreten durch</strong>
-        <Br />
-        {CONTACT_INFO.ownerName}
+        Deutschland
         <Br />
         <Br />
         <strong>Kontakt</strong>
         <Br />
-        Telefon: {CONTACT_INFO.phone}
+        Mail: dilovanabdo.steuer@gmail.com
         <Br />
-        E-Mail: {CONTACT_INFO.email}
-        <Br />
-        <Br />
-        <strong>Berufsbezeichnung und berufsrechtliche Regelungen</strong>
-        <Br />
-        Berufsbezeichnung: Steuerberater
-        <Br />
-        Zuständige Kammer: {CONTACT_INFO.kammer}
-        <Br />
-        Verliehen in: Deutschland
+        Mobil: +49 155 6515 4140
         <Br />
         <Br />
-        <strong>Umsatzsteuer-ID</strong>
+        <strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong>
         <Br />
-        Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:
+        Dilovan Abdo
         <Br />
-        {CONTACT_INFO.ustId}
+        Siemensweg 20
         <Br />
-        <Br />
-        <strong>Steuernummer</strong>
-        <Br />
-        {CONTACT_INFO.steuernummer}
+        38228 Salzgitter
         <Br />
         <Br />
-        <strong>Aufsichtsbehörde</strong>
+        <strong>Berufliche Bezeichnung:</strong>
         <Br />
-        {CONTACT_INFO.kammer}
-        <Br />
-        <Br />
-        <strong>Haftungsausschluss</strong>
-        <Br />
-        <strong>Haftung für Inhalte</strong>
-        <Br />
-        Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
-        <Br />
-        <strong>Haftung für Links</strong>
-        <Br />
-        Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
-        <Br />
-        <strong>Urheberrecht</strong>
-        <Br />
-        Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
-        <Br />
-        <strong>Online-Streitbeilegung</strong>
-        <Br />
-        Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr. Unsere E-Mail-Adresse: {CONTACT_INFO.email}
+        Büroservice
+
     </>
 );
 
