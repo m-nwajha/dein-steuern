@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: "Kontakt | Deine Steuern",
+    title: "Kontakt",
 };
 
 export default function KontaktPage() {
