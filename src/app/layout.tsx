@@ -27,8 +27,30 @@ const poppins = Poppins({
 
 
 export const metadata: Metadata = {
-  title: "Deine Steuern",
-  description: "Dein Steuerkanzlei in Salzgitter-Bad",
+  title: {
+    default: "Steuerberater in Salzgitter | Deine Steuern – Steuerkanzlei & Lohnbuchhaltung",
+    template: "%s | Deine Steuern – Steuerkanzlei & Lohnbuchhaltung"
+  },
+  description: "Ihr Steuerberater in Salzgitter: Professionelle Steuerberatung, Lohnbuchhaltung und Finanzbuchhaltung für Unternehmen und Privatpersonen. Persönlich, digital und zuverlässig.",
+  keywords: [
+    "Steuerberater Salzgitter", "Steuerkanzlei Salzgitter", "Steuerbüro Salzgitter",
+    "Lohnbuchhaltung Salzgitter", "Finanzbuchhaltung Salzgitter",
+    "Steuerberatung Salzgitter", "Steuererklärung Hilfe Salzgitter",
+    "Unternehmensberatung Steuern Salzgitter",
+    "Buchhaltung Service Salzgitter", "Steueroptimierung Salzgitter",
+    "Steuerberater Niedersachsen", "Lohnabrechnung Salzgitter",
+    "Gehaltsabrechnung Salzgitter", "Jahresabschluss Salzgitter",
+    "digitale Steuerkanzlei Salzgitter", "Steuerberatung Unternehmen Salzgitter",
+    "Steuerberatung Selbstständige Salzgitter", "Dilovan Abdo"
+  ],
+  robots: "index, follow",
+  openGraph: {
+    title: "Steuerberater Salzgitter | Deine Steuern",
+    description: "Steuerberatung, Buchhaltung & Lohnservice in Salzgitter für Unternehmen und Privatpersonen.",
+    type: "website",
+    url: "https://www.deinesteuern.com",
+    siteName: "Deine Steuern",
+  }
 };
 
 export default function RootLayout({
