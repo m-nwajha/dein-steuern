@@ -21,6 +21,7 @@ export type LeistungItem = {
 };
 
 export type ServicePageData = {
+    backgroundImage?: string;
     heading: {
         title: string;
         description: ReactNode;

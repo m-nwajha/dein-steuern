@@ -2,6 +2,7 @@ import { ServicePageData } from '@/@types/ServicePage';
 import Br from '@/components/ui/Br';
 
 export const UMSATZSTEUER_PAGE: Omit<ServicePageData, 'starten' | 'leistungen'> = {
+    backgroundImage: '/assets/images/services/Umsatzsteuer.jpg',
     heading: {
         title: 'Umsatzsteuer',
         description: (<>

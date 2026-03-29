@@ -1,6 +1,7 @@
 import { ServicePageData } from '@/@types/ServicePage';
 
 export const BUCHFUEHRUNG_PAGE: Omit<ServicePageData, 'starten' | 'leistungen'> = {
+    backgroundImage: '/assets/images/services/lohnsteuer.jpg',
     heading: {
         title: 'Buchführung für Unternehmen und Selbstständige',
         description: 'Wir unterstützen Unternehmen, Selbstständige und Gründer zuverlässig bei der laufenden Buchführung und der Organisation ihrer Unterlagen. Mit strukturierter Arbeitsweise und langjähriger Erfahrung sorgen wir für Ordnung in Ihren Zahlen und eine klare Übersicht über Ihre Finanzen.\nWir bereiten Ihre Buchhaltung professionell vor, erstellen Auswertungen und unterstützen Sie bei allen organisatorischen Themen rund um Ihre Unterlagen und das Finanzamt. So können Sie sich auf Ihr Tagesgeschäft konzentrieren, während wir uns um die Struktur Ihrer Buchführung kümmern.',

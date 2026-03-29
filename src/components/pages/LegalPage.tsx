@@ -20,7 +20,7 @@ const LegalPage = ({ title, content }: LegalPageProps) => {
                 </Container>
             </AnimatedSection>
 
-            <AnimatedSection direction='up'>
+            <AnimatedSection direction='up' amount={0.01}>
                 <ServicePageHeading
                     isJustify
                     title={title}

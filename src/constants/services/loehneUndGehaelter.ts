@@ -1,6 +1,7 @@
 import { ServicePageData } from '@/@types/ServicePage';
 
 export const LOEHNE_UND_GEHAELTER_PAGE: Omit<ServicePageData, 'starten' | 'leistungen'> = {
+    backgroundImage: '/assets/images/services/Lohnundgehalt.jpg',
     heading: {
         title: 'Löhne und Gehälter',
         description: 'Wir unterstützen Unternehmen zuverlässig bei der Erstellung der laufenden Lohn- und Gehaltsabrechnungen. Von der Vorbereitung der Daten bis zur strukturierten Aufbereitung aller relevanten Unterlagen sorgen wir für einen reibungslosen Ablauf. So behalten Sie den Überblick und Ihre Mitarbeiter erhalten ihre Abrechnungen pünktlich und korrekt.',

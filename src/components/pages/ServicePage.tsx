@@ -31,7 +31,7 @@ const ServicePage: FC<ServicePageProps> = ({ data, currentServiceId }) => {
   });
 
   const sections: SectionConfig[] = [
-    { id: 'hero', component: <HeroService />, direction: 'down', amount: 0.1 },
+    { id: 'hero', component: <HeroService backgroundImage={data.backgroundImage} />, direction: 'down', amount: 0.1 },
     { id: 'heading', component: <ServicePageHeading title={data.heading.title} description={data.heading.description} />, direction: 'up' },
     ...(data.soArbeiten ? [{ id: 'soArbeiten', component: <SoArbeitenCards title={data.soArbeiten.title} items={data.soArbeiten.items} />, direction: 'up' as const }] : []),
     ...(data.wasWir ? [{ id: 'wasWir', component: <WasWirFürSieUbernehmenSection list={data.wasWir.list} />, direction: 'up' as const }] : []),

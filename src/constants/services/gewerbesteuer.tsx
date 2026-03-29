@@ -2,6 +2,7 @@ import { ServicePageData } from '@/@types/ServicePage';
 import Br from '@/components/ui/Br';
 
 export const GEWERBESTEUER_PAGE: Omit<ServicePageData, 'starten' | 'leistungen'> = {
+    backgroundImage: '/assets/images/services/Gewerbesteuer.jpg',
     heading: {
         title: 'Gewerbesteuer',
         description: (<>

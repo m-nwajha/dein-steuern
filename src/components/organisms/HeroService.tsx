@@ -12,7 +12,7 @@ const HeroService = ({ backgroundImage = DEFAULT_IMAGE }: HeroServiceProps) => {
     return (
         <section
             id='hero'
-            className="relative min-h-[calc(100vh-110px)] lg:h-[calc(115vh-110px)] overflow-hidden"
+            className="relative min-h-[calc(100vh-110px)] lg:h-[calc(115vh-110px)] bg-black/10 overflow-hidden"
         >
             <Image
                 src={backgroundImage}
@@ -20,7 +20,7 @@ const HeroService = ({ backgroundImage = DEFAULT_IMAGE }: HeroServiceProps) => {
                 fill
                 priority
                 style={{ objectFit: 'cover', objectPosition: 'center' }}
-                className="-z-10"
+                className="-z-10 opacity-90 blur-[2px]"
             />
             <Container variant='xl' className='mt-[130px] relative z-10'>
                 <BackButton />

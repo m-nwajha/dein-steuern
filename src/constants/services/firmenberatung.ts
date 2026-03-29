@@ -1,6 +1,7 @@
 import { ServicePageData } from '@/@types/ServicePage';
 
 export const FIRMENBERATUNG_PAGE: Omit<ServicePageData, 'starten' | 'leistungen'> = {
+    backgroundImage: '/assets/images/services/Firmenberatung.jpg',
     heading: {
         title: 'Firmenberatung',
         description: 'Wir unterstützen Unternehmen, Selbstständige und Gründer bei der Organisation ihrer kaufmännischen Abläufe und bei allen Fragen rund um Buchführung, Struktur und betriebliche Zahlen. Gemeinsam schaffen wir transparente Prozesse, eine klare Übersicht über Einnahmen und Ausgaben sowie eine solide Grundlage für unternehmerische Entscheidungen. Dabei begleiten wir Sie im Alltag Ihres Unternehmens, bereiten Unterlagen strukturiert auf und sorgen für effiziente Abläufe im Austausch mit den zuständigen Stellen.',
