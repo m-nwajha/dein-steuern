@@ -25,11 +25,11 @@ const poppins = Poppins({
   subsets: ["latin"],
 });
 
-
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.deinesteuern.com'),
   title: {
     default: "Steuerberater in Salzgitter | Deine Steuern – Steuerkanzlei & Lohnbuchhaltung",
-    template: "%s | Deine Steuern – Steuerkanzlei & Lohnbuchhaltung"
+    template: "%s | Deine Steuern"
   },
   description: "Ihr Steuerberater in Salzgitter: Professionelle Steuerberatung, Lohnbuchhaltung und Finanzbuchhaltung für Unternehmen und Privatpersonen. Persönlich, digital und zuverlässig.",
   keywords: [
@@ -43,14 +43,58 @@ export const metadata: Metadata = {
     "digitale Steuerkanzlei Salzgitter", "Steuerberatung Unternehmen Salzgitter",
     "Steuerberatung Selbstständige Salzgitter", "Dilovan Abdo"
   ],
-  robots: "index, follow",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  alternates: {
+    canonical: 'https://www.deinesteuern.com',
+  },
   openGraph: {
     title: "Steuerberater Salzgitter | Deine Steuern",
     description: "Steuerberatung, Buchhaltung & Lohnservice in Salzgitter für Unternehmen und Privatpersonen.",
     type: "website",
     url: "https://www.deinesteuern.com",
     siteName: "Deine Steuern",
-  }
+    locale: "de_DE",
+  },
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'AccountingService',
+  name: 'Deine Steuern',
+  description: 'Steuerberatung, Lohnbuchhaltung und Finanzbuchhaltung in Salzgitter für Unternehmen und Privatpersonen.',
+  url: 'https://www.deinesteuern.com',
+  telephone: '+491556515 4140',
+  email: 'dilovanabdo.steuer@gmail.com',
+  founder: {
+    '@type': 'Person',
+    name: 'Dilovan Abdo',
+  },
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Braunschweiger Str. 169',
+    addressLocality: 'Salzgitter',
+    postalCode: '38259',
+    addressCountry: 'DE',
+  },
+  areaServed: {
+    '@type': 'City',
+    name: 'Salzgitter',
+  },
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '09:00',
+      closes: '17:00',
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -63,6 +107,10 @@ export default function RootLayout({
       <body
         className={`${interSans.variable} ${nunito.variable} ${roboto.variable} ${poppins.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <MainLayout>
           {children}
         </MainLayout>

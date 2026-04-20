@@ -4,6 +4,14 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: DATENSCHUTZ_TITLE,
+    description: 'Informationen zum Datenschutz und zur Verarbeitung Ihrer personenbezogenen Daten bei Deine Steuern.',
+    alternates: {
+        canonical: 'https://www.deinesteuern.com/datenschutzerklaerung',
+    },
+    robots: {
+        index: false,
+        follow: false,
+    },
 };
 
 export default function DatenschutzerklaerungPage() {

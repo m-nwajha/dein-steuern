@@ -4,6 +4,14 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: IMPRESSUM_TITLE,
+    description: 'Impressum und rechtliche Angaben von Deine Steuern.',
+    alternates: {
+        canonical: 'https://www.deinesteuern.com/impressum',
+    },
+    robots: {
+        index: false,
+        follow: false,
+    },
 };
 
 export default function ImpressumPage() {

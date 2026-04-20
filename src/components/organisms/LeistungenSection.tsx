@@ -12,7 +12,7 @@ const LeistungenSection = () => {
                 <SectionHeading badge={LEISTUNGEN?.badge} title={LEISTUNGEN?.title} description={LEISTUNGEN?.description} />
             </Container>
             <Container variant='xl' className="relative z-10">
-                <Grid sm={1} md={3} lg={3} gap={12} className="md:gap-5">
+                <Grid sm={1} md={3} lg={3} gap={12} className="md:gap-5 py-9">
                     {LEISTUNGEN?.items.map((leistungItem) => (
                         <LeistungenItem key={leistungItem.id} {...leistungItem} />
                     ))}

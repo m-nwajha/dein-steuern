@@ -4,6 +4,14 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: NUTZUNGSBEDINGUNGEN_TITLE,
+    description: 'Nutzungsbedingungen für die Verwendung der Website von Deine Steuern.',
+    alternates: {
+        canonical: 'https://www.deinesteuern.com/nutzungsbedingungen',
+    },
+    robots: {
+        index: false,
+        follow: false,
+    },
 };
 
 export default function NutzungsbedingungenPage() {

@@ -12,7 +12,7 @@ import ProgressBar from '../atoms/ProgressBar';
 
 const HIDE_LAYOUT_PATHS = ['/admin', '/admin/login'];
 
-const HIDE_CONTACT_PATHS = ['/impressum', '/nutzungsbedingungen', '/datenschutzerklaerung'];
+const HIDE_CONTACT_PATHS = ['/impressum', '/nutzungsbedingungen', '/datenschutzerklaerung', '/kontakt'];
 
 const MainLayout: FC<{ children: ReactNode; }> = ({ children }) => {
     const pathname = usePathname();
