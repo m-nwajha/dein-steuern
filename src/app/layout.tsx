@@ -83,10 +83,20 @@ const jsonLd = {
     postalCode: '38259',
     addressCountry: 'DE',
   },
-  areaServed: {
-    '@type': 'City',
-    name: 'Salzgitter',
-  },
+  areaServed: [
+    { '@type': 'City', name: 'Salzgitter' },
+    { '@type': 'City', name: 'Hannover' },
+    { '@type': 'City', name: 'Wolfsburg' },
+    { '@type': 'City', name: 'Braunschweig' },
+    { '@type': 'City', name: 'Magdeburg' },
+    { '@type': 'City', name: 'Halberstadt' },
+    { '@type': 'City', name: 'Wernigerode' },
+    { '@type': 'City', name: 'Goslar' },
+    { '@type': 'City', name: 'Einbeck' },
+    { '@type': 'City', name: 'Bad Pyrmont' },
+    { '@type': 'City', name: 'Hildesheim' },
+    { '@type': 'City', name: 'Salzgitter-Bad' },
+  ],
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
